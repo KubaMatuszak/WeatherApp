@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.WeatherPage"
+             Title="WeatherPage"
+             xmlns:viewmodel="clr-namespace:WeatherApp.ViewModels"
+             x:DataType="viewmodel:MainWindowViewModel"
+             Background="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" x:Name="City" Text="{Binding City}" HorizontalOptions="Center" 
+               FontSize="30" FontAttributes="Bold" TextColor="White"></Label>
+        <Label Grid.Row="1" x:Name="Temp" Text="{Binding Temperature}" HorizontalOptions="Center" FontSize="30"
+               TextColor="White"/>
+    </Grid>
+</ContentPage>
