@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace WeatherApp.Models
 {
 	//model for gettin all the informations from API JSON object
+	// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
 	public class City
 	{
 		public int id { get; set; }
@@ -63,7 +64,6 @@ namespace WeatherApp.Models
 		public int cnt { get; set; }
 		public List<List> list { get; set; }
 		public City city { get; set; }
-		
 	}
 
 	public class Sys
@@ -85,6 +85,8 @@ namespace WeatherApp.Models
 		public int deg { get; set; }
 		public double gust { get; set; }
 	}
+
+
 
 
 }
