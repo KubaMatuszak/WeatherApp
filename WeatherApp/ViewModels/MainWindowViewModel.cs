@@ -30,7 +30,7 @@ namespace WeatherApp.ViewModels
 			var temp =  await ApiService.GetWeather(location.Latitude,location.Longitude);
 			City = temp.city.name;
 			
-			Data = $"Description: {temp.list[0].weather[0].description.ToString()} Temperature: {temp.list[0].main.temp-273}";
+			Data = $"Description: {temp.list[0].weather[0].description.ToString()} Temperature: {Math.Round(temp.list[0].main.temp-273)}ºC";
 			Img = ImgUrlGenerator(temp.list[0].main.temp - 273);
 			
 
@@ -44,7 +44,7 @@ namespace WeatherApp.ViewModels
 			}
 			if (temperature >=10 &&  temperature <= 20)
 			{
-				return "nromal_no_clouds";
+				return "normal_no_clouds.jpg";
 			}
 			else
 			{
