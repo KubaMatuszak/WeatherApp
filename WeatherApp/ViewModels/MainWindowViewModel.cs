@@ -28,10 +28,10 @@ namespace WeatherApp.ViewModels
 		{
 			location = await geo.GetCurrentLocation();
 			var temp =  await ApiService.GetWeather(location.Latitude,location.Longitude);
-			City = temp.city.name;
+			City = temp.city.Name;
 			
-			Data = $"Description: {temp.list[0].weather[0].description.ToString()} Temperature: {Math.Round(temp.list[0].main.temp-273)}ºC";
-			Img = ImgUrlGenerator(temp.list[0].main.temp - 273);
+			Data = $"Description: {temp.list[0].weather[0].Description.ToString()} Temperature: {Math.Round(temp.list[0].main.Temp-273)}ºC";
+			Img = ImgUrlGenerator(temp.list[0].main.Temp - 273);
 			
 
 
